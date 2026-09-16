@@ -1,0 +1,24 @@
+<svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Magic Tools Contracting">
+  <defs>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c2f7c"/>
+      <stop offset="100%" stop-color="#1a1c4d"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0281f"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- star icon -->
+  <g transform="translate(10,14) scale(0.85)">
+    <path d="M40 0 L49 27 L78 27 L54 44 L63 71 L40 54 L17 71 L26 44 L2 27 L31 27 Z"
+          fill="url(#redGrad)"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="95" y="45" font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+        font-weight="bold" font-size="34" fill="url(#navyGrad)" letter-spacing="0.5">MAGIC TOOLS</text>
+  <text x="95" y="80" font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+        font-weight="bold" font-size="28" fill="url(#redGrad)" letter-spacing="1">CONTRACTING</text>
+</svg>
