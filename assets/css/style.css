@@ -117,3 +117,22 @@ body {
   text-align: center;
   padding: 20px 0;
 }
+
+.footer-contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin-bottom: 12px;
+}
+
+.footer-contact a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
