@@ -24,8 +24,10 @@ body {
 
 .site-header .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  row-gap: 12px;
 }
 
 .logo {
@@ -46,7 +48,9 @@ body {
 .site-header nav ul {
   list-style: none;
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
 }
 
 .site-header nav a {
@@ -62,10 +66,11 @@ body {
 }
 
 .hero-logo {
-  max-width: 320px;
-  width: 100%;
+  max-width: 260px;
+  width: 60%;
   height: auto;
-  margin: 0 auto 24px;
+  margin: 0 auto 32px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.45));
 }
 
 .hero h1 {
@@ -76,6 +81,16 @@ body {
 .hero p {
   margin-bottom: 24px;
   font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .site-header .container {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
 }
 
 .btn {
