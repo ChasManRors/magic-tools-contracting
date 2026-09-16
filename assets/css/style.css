@@ -107,6 +107,15 @@ body {
 }
 
 .intro h2 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.intro h2:first-child {
+  margin-top: 0;
+}
+
+.intro p {
   margin-bottom: 16px;
 }
 
@@ -154,4 +163,76 @@ body {
 
 .contact-list a:hover {
   text-decoration: underline;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 24px;
+  border-top: 4px solid #b91c1c;
+}
+
+.service-card h3 {
+  margin-bottom: 8px;
+  color: #1a1c4d;
+}
+
+.services-cta {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.services-cta a {
+  color: #b91c1c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.services-cta a:hover {
+  text-decoration: underline;
+}
+
+.gallery-note {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.gallery-note a {
+  color: #b91c1c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gallery-note a:hover {
+  text-decoration: underline;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(135deg, #2c2f7c, #1a1c4d);
+}
+
+.gallery-item--alt {
+  background: linear-gradient(135deg, #e0281f, #8f1512);
 }
