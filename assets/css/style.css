@@ -59,7 +59,7 @@ body {
 }
 
 .hero {
-  background: #333;
+  background: #1c1c1c;
   color: #fff;
   padding: 80px 0;
   text-align: center;
@@ -70,7 +70,6 @@ body {
   width: 60%;
   height: auto;
   margin: 0 auto 32px;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.45));
 }
 
 .hero h1 {
@@ -134,5 +133,25 @@ body {
 
 .footer-contact a:hover {
   color: #fff;
+  text-decoration: underline;
+}
+
+.contact-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+.contact-list a {
+  color: #b91c1c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
   text-decoration: underline;
 }
