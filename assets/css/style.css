@@ -370,3 +370,234 @@ body {
   font-size: 0.9rem;
   margin-top: 10px;
 }
+
+/* Gallery cards that link to a "How we built it" cartoon */
+.gallery-link {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.gallery-link::after {
+  content: "How we built it \2192";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #c9a227;
+  color: #1c1c1c;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.gallery-link:hover .gallery-item,
+.gallery-link:focus-visible .gallery-item {
+  box-shadow: 0 0 0 3px #c9a227;
+}
+
+/* "How we built it" comic page */
+.comic {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 12px;
+  background: #f3ead2;
+  border: 4px solid #14110f;
+  box-shadow: 6px 6px 0 #14110f;
+}
+
+.panel {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 4px solid #14110f;
+  container-type: inline-size;
+}
+
+.panel .scene {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.panel.tilt .scene {
+  transform: rotate(-2.5deg) scale(1.1);
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(rgba(20, 17, 15, 0.5) 1px, transparent 1.6px) 0 0 / 6px 6px;
+  -webkit-mask-image: linear-gradient(160deg, transparent 55%, #000);
+  mask-image: linear-gradient(160deg, transparent 55%, #000);
+  opacity: 0.35;
+}
+
+.panel.cool::before,
+.panel.warm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.panel.cool::before { background: linear-gradient(180deg, rgba(120, 160, 220, 0.28), transparent 70%); }
+.panel.warm::before { background: linear-gradient(180deg, rgba(247, 161, 74, 0.34), transparent 75%); }
+
+.narration {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  max-width: 58%;
+  margin: 0;
+  padding: 0.35em 0.65em;
+  background: #f6d64a;
+  border: 0 solid #14110f;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  color: #14110f;
+  font: 600 clamp(10px, 3.3cqi, 16px) / 1.25 "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.narration b {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.narration--bottom {
+  top: auto;
+  bottom: 0;
+  border-bottom-width: 0;
+  border-top-width: 3px;
+}
+
+.bubble {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  padding: 0.35em 0.7em;
+  background: #fff;
+  border: 3px solid #14110f;
+  border-radius: 16px;
+  color: #14110f;
+  font: 700 clamp(10px, 3.3cqi, 15px) / 1.2 "Trebuchet MS", "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.bubble::before,
+.bubble::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.bubble.tail-bl::before,
+.bubble.tail-br::before { bottom: -17px; border-width: 17px 0 0 15px; border-color: #14110f transparent; }
+.bubble.tail-bl::after,
+.bubble.tail-br::after { bottom: -11px; border-width: 12px 0 0 10px; border-color: #fff transparent; }
+.bubble.tail-bl::before { left: 14px; }
+.bubble.tail-bl::after { left: 16px; }
+.bubble.tail-br::before { right: 14px; transform: scaleX(-1); }
+.bubble.tail-br::after { right: 16px; transform: scaleX(-1); }
+
+.sfx {
+  position: absolute;
+  z-index: 3;
+  color: #ffdf3d;
+  font: 900 clamp(16px, 7.5cqi, 40px) / 1 Impact, "Arial Black", sans-serif;
+  letter-spacing: 0.03em;
+  -webkit-text-stroke: 5px #14110f;
+  paint-order: stroke fill;
+  text-shadow: 3px 3px 0 #14110f;
+  transform: rotate(var(--r, -6deg));
+  pointer-events: none;
+}
+
+.panel-photo {
+  aspect-ratio: 4 / 5;
+}
+
+.panel-photo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.crew-overlay {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.build-cta {
+  margin-top: 28px;
+  text-align: center;
+}
+
+@media (min-width: 760px) {
+  .comic {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .p1 { grid-column: 1 / -1; }
+  .p2 { grid-column: 1 / 8; }
+  .p3 { grid-column: 8 / 13; }
+  .p4 { grid-column: 1 / 8; grid-row: 3; }
+  .p5 { grid-column: 1 / 8; grid-row: 4; }
+  .p6 { grid-column: 8 / 13; grid-row: 3 / 5; }
+
+  .panel .scene--fill {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .panel-photo {
+    aspect-ratio: auto;
+  }
+
+  .panel-photo img {
+    object-position: 45% 30%;
+  }
+}
+
+/* Cartoon crew: each person sets their own colors on the <g> that uses a pose */
+.p-rafa   { --skin: #c98f62; --hair: #2b1b12; --shirt: #e2702a; --shirt-dark: #b85a20; --hat: #f2c22e; }
+.p-bia    { --skin: #7a4a32; --hair: #1d120d; --shirt: #7d4fa8; --shirt-dark: #61398a; --hat: #ffffff; --bun: visible; }
+.p-thiago { --skin: #f0c9a4; --hair: #8a5a2b; --shirt: #2f80c8; --shirt-dark: #2364a0; --hat: #e8672b; --beard: visible; }
+.p-marcos { --skin: #4a2c1f; --hair: #111111; --shirt: #e8c53a; --shirt-dark: #c4a324; --hat: #3f9b4f; }
+.p-lu     { --skin: #b47a52; --hair: #3b2314; --shirt: #d9485f; --shirt-dark: #b03348; --hat: #ffffff; --curl: visible; }
+
+.skin { fill: var(--skin); }
+.shirt { fill: var(--shirt); }
+.hat { fill: var(--hat); }
+.glove { fill: #d9b24a; stroke: #8a6d1f; stroke-width: 1; }
+.s-skin { stroke: var(--skin); }
+.s-shirt { stroke: var(--shirt); }
+.s-shirt-dark { stroke: var(--shirt-dark); }
+.pants, .pants-back { fill: none; stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; }
+.pants { stroke: #3a4a6a; }
+.pants-back { stroke: #2f3d5a; }
+.boot { fill: #4b3426; }
+
+@media (max-width: 759px) {
+  .p1 .bubble:nth-of-type(3) { display: none; }
+}
