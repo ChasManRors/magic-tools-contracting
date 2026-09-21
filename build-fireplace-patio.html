@@ -107,90 +107,127 @@
         <rect x="-3.5" y="-31" width="7" height="7" fill="#f28c28"/>
       </g>
 
-      <!-- Crew: bodies -->
+      <!-- Crew: legs (origin between the feet; hips sit at y = -40) -->
       <g id="legs">
-        <rect x="-13" y="-42" width="12" height="36" rx="4" fill="#3a4a6a"/>
-        <rect x="2" y="-42" width="12" height="36" rx="4" fill="#3a4a6a"/>
-        <rect x="-15" y="-9" width="16" height="9" rx="3.5" fill="#4b3426"/>
-        <rect x="1" y="-9" width="18" height="9" rx="3.5" fill="#4b3426"/>
+        <path d="M-2 -42 L-9 -9" class="pants-back"/>
+        <path d="M3 -42 L10 -9" class="pants"/>
+        <rect x="-18" y="-10" width="17" height="10" rx="4" class="boot"/>
+        <rect x="3" y="-10" width="20" height="10" rx="4" class="boot"/>
+      </g>
+      <g id="legs-stride">
+        <path d="M-2 -42 L-14 -23 L-27 -9" class="pants-back"/>
+        <path d="M3 -42 L17 -25 L15 -9" class="pants"/>
+        <rect x="-40" y="-12" width="19" height="10" rx="4" class="boot" transform="rotate(-14 -30 -7)"/>
+        <rect x="5" y="-10" width="22" height="10" rx="4" class="boot"/>
+      </g>
+      <g id="legs-wide">
+        <path d="M-2 -42 L-19 -24 L-24 -9" class="pants-back"/>
+        <path d="M3 -42 L21 -24 L26 -9" class="pants"/>
+        <rect x="-36" y="-10" width="18" height="10" rx="4" class="boot"/>
+        <rect x="12" y="-10" width="22" height="10" rx="4" class="boot"/>
+      </g>
+      <g id="legs-jump">
+        <path d="M-2 -42 L-9 -9" class="pants-back"/>
+        <path d="M3 -42 L20 -32 L14 -18" class="pants"/>
+        <rect x="-18" y="-10" width="17" height="10" rx="4" class="boot"/>
+        <rect x="6" y="-24" width="20" height="10" rx="4" class="boot" transform="rotate(-18 16 -19)"/>
       </g>
       <g id="legs-kneel">
-        <path d="M0 -32 L24 -32 L24 -8" stroke="#3a4a6a" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M0 -32 L-12 -6 L-32 -6" stroke="#324160" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <rect x="18" y="-9" width="22" height="9" rx="3.5" fill="#4b3426"/>
-        <rect x="-40" y="-11" width="14" height="9" rx="3.5" fill="#4b3426"/>
+        <path d="M0 -32 L24 -32 L24 -8" class="pants"/>
+        <path d="M0 -32 L-12 -6 L-32 -6" class="pants-back"/>
+        <rect x="18" y="-9" width="22" height="9" rx="3.5" class="boot"/>
+        <rect x="-40" y="-11" width="14" height="9" rx="3.5" class="boot"/>
       </g>
-      <g id="upper">
-        <rect x="-16" y="-44" width="32" height="46" rx="11" class="shirt"/>
+
+      <!-- Crew: torso and head (hips are the origin) -->
+      <g id="torso">
+        <path d="M-15 -44 Q-19 -22 -15 2 L15 2 Q19 -22 15 -44 Q0 -52 -15 -44Z" class="shirt"/>
+        <path d="M-15 -4 L15 -4" stroke="rgba(0,0,0,.28)" stroke-width="3.5"/>
+        <path d="M-4 -47 L0 -38 L4 -47" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M-9 -30 Q-7 -20 -9 -10" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="2"/>
+      </g>
+      <g id="head">
         <rect x="-4" y="-52" width="9" height="10" class="skin"/>
         <circle class="bun" cx="-15" cy="-74" r="7" style="fill:var(--hair)"/>
-        <g class="curl" style="visibility:var(--curl,hidden);fill:var(--hair)">
+        <g style="visibility:var(--curl,hidden);fill:var(--hair)">
           <circle cx="-14" cy="-68" r="6"/><circle cx="-17" cy="-60" r="6"/><circle cx="-14" cy="-52" r="5"/>
         </g>
         <circle cx="0" cy="-60" r="14.5" class="skin"/>
-        <path class="beard" d="M-6 -56 Q-4 -40 6 -40 Q15 -42 15 -55 Q10 -47 4 -47 Q-2 -47 -6 -56Z" style="visibility:var(--beard,hidden);fill:var(--hair)"/>
+        <path d="M-6 -56 Q-4 -40 6 -40 Q15 -42 15 -55 Q10 -47 4 -47 Q-2 -47 -6 -56Z" style="visibility:var(--beard,hidden);fill:var(--hair)"/>
         <ellipse cx="-13" cy="-58" rx="4" ry="6" style="fill:var(--hair)"/>
         <circle cx="4" cy="-59" r="1.9" fill="#2a1a12"/>
         <circle cx="11.5" cy="-59" r="1.9" fill="#2a1a12"/>
-        <path d="M2 -52 Q8 -45 14 -52 Z" fill="#fff" stroke="#5a2a1f" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M2 -52 Q8 -45 14 -52 Z" fill="#fff" stroke="#5a2a1f" stroke-width="1.6" stroke-linejoin="round" style="visibility:var(--smile,visible)"/>
+        <path d="M3 -50 L13 -51.5" stroke="#5a2a1f" stroke-width="2.2" stroke-linecap="round" style="visibility:var(--grit,hidden)"/>
+        <path d="M3 -48 L13 -49.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round" style="visibility:var(--grit,hidden)"/>
+        <path d="M-1 -70 Q-4 -76 -1 -79 Q2 -76 -1 -70Z" fill="#8fd3f0" stroke="#33546b" stroke-width=".8" style="visibility:var(--sweat,hidden)" transform="translate(-16 12)"/>
         <rect x="0" y="-65" width="18" height="9" rx="3.5" fill="#bfe6f5" fill-opacity=".55" stroke="#33546b" stroke-width="1.5"/>
         <path d="M0 -61 L-12 -62" stroke="#33546b" stroke-width="1.5"/>
         <path d="M-16 -68 Q-16 -87 1 -87 Q18 -87 18 -68 Z" class="hat" stroke="rgba(0,0,0,.25)" stroke-width="1.2"/>
         <rect x="-18" y="-69" width="40" height="5" rx="2.5" class="hat" stroke="rgba(0,0,0,.25)" stroke-width="1.2"/>
         <rect x="-3" y="-87" width="7" height="14" rx="2" fill="rgba(0,0,0,.14)"/>
       </g>
+      <g id="upper">
+        <use href="#torso"/>
+        <g transform="rotate(-8 0 -46)"><use href="#head"/></g>
+      </g>
 
       <!-- Crew: arm poses (hips are the origin) -->
       <g id="arms-fwd">
-        <path d="M-2 -36 L8 -20 L27 -23" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M-2 -38 L8 -20 L27 -23" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         <path d="M8 -20 L27 -23" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
         <circle cx="28" cy="-23" r="6" class="glove"/>
-        <path d="M8 -36 L17 -20 L35 -26" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M8 -38 L17 -20 L35 -26" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         <path d="M17 -20 L35 -26" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
         <circle cx="36" cy="-26" r="6" class="glove"/>
       </g>
+      <g id="arms-push">
+        <path d="M-2 -38 L14 -26 L26 -18" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M14 -26 L26 -18" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="27" cy="-17" r="6" class="glove"/>
+        <path d="M8 -38 L20 -28 L32 -22" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M20 -28 L32 -22" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="33" cy="-21" r="6" class="glove"/>
+      </g>
       <g id="arms-up">
-        <path d="M-2 -36 L16 -44 L20 -62" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M16 -44 L20 -62" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
-        <circle cx="20" cy="-64" r="6" class="glove"/>
-        <path d="M8 -36 L26 -46 L29 -64" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M26 -46 L29 -64" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
-        <circle cx="29" cy="-66" r="6" class="glove"/>
+        <path d="M-2 -38 L16 -46 L20 -64" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M16 -46 L20 -64" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="20" cy="-66" r="6" class="glove"/>
+        <path d="M8 -38 L26 -48 L29 -66" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M26 -48 L29 -66" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="29" cy="-68" r="6" class="glove"/>
+      </g>
+      <g id="arms-swing">
+        <path d="M-2 -38 L10 -60 L10 -80" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M10 -60 L10 -80" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="10" cy="-82" r="6" class="glove"/>
+        <path d="M8 -38 L26 -58 L16 -82" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M26 -58 L16 -82" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="16" cy="-84" r="6" class="glove"/>
       </g>
       <g id="arms-kneel">
-        <path d="M-2 -36 L22 -14 L38 6" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M-2 -38 L22 -14 L38 6" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         <path d="M22 -14 L38 6" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
         <circle cx="39" cy="8" r="6" class="glove"/>
-        <path d="M8 -36 L28 -12 L48 10" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M8 -38 L28 -12 L48 10" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         <path d="M28 -12 L48 10" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
         <circle cx="49" cy="12" r="6" class="glove"/>
       </g>
       <g id="arms-cheer">
-        <path d="M-6 -36 L-22 -20 L-10 -6" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M-22 -20 L-10 -6" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
-        <circle cx="-9" cy="-5" r="6" class="glove"/>
-        <path d="M8 -36 L24 -52 L26 -76" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M24 -52 L26 -76" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
-        <circle cx="26" cy="-79" r="7" class="glove"/>
-        <rect x="24" y="-93" width="5" height="10" rx="2.5" class="glove"/>
+        <path d="M-6 -38 L-24 -56 L-34 -84" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M-24 -56 L-34 -84" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="-35" cy="-87" r="7" class="glove"/>
+        <path d="M8 -38 L26 -58 L36 -86" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M26 -58 L36 -86" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="37" cy="-89" r="7" class="glove"/>
       </g>
-
-      <!-- Crew: full poses (feet on the origin) -->
-      <g id="pose-fwd">
-        <use href="#legs"/>
-        <g transform="translate(0 -40)"><use href="#upper"/><use href="#arms-fwd"/></g>
-      </g>
-      <g id="pose-up">
-        <use href="#legs"/>
-        <g transform="translate(0 -40)"><use href="#upper"/><use href="#arms-up"/></g>
-      </g>
-      <g id="pose-cheer">
-        <use href="#legs"/>
-        <g transform="translate(0 -40)"><use href="#upper"/><use href="#arms-cheer"/></g>
-      </g>
-      <g id="pose-kneel">
-        <use href="#legs-kneel"/>
-        <g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g>
+      <g id="arms-hips">
+        <path d="M-6 -38 L-24 -24 L-12 -8" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M-24 -24 L-12 -8" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="-11" cy="-7" r="6" class="glove"/>
+        <path d="M8 -38 L27 -24 L13 -8" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M27 -24 L13 -8" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="12" cy="-7" r="6" class="glove"/>
       </g>
 
       <!-- The finished fireplace and its walls (the last panel matches the photo) -->
@@ -250,21 +287,13 @@
             <use href="#stake" x="250" y="205"/><use href="#stake" x="330" y="205"/>
             <line x1="70" y1="181" x2="330" y2="181" stroke="#f7d21c" stroke-width="1.6"/>
             <line x1="70" y1="224" x2="330" y2="224" stroke="#fff" stroke-opacity=".85" stroke-width="2" stroke-dasharray="7 6"/>
-            <path d="M126 196 Q190 222 252 200" stroke="#f2c22e" stroke-width="3" fill="none"/>
-            <g class="p-rafa" style="filter:url(#ink)" transform="translate(92 268) scale(.9)">
-              <use href="#pose-fwd"/>
-              <rect x="30" y="-74" width="16" height="12" rx="3" fill="#333"/>
-            </g>
-            <g class="p-bia" style="filter:url(#ink)" transform="translate(304 274) scale(-.9 .9)">
-              <use href="#pose-kneel"/>
-              <rect x="56" y="-14" width="6" height="16" fill="#d2a75d"/>
-              <line x1="47" y1="10" x2="56" y2="-32" stroke="#8a5a2b" stroke-width="4" stroke-linecap="round"/>
-              <rect x="46" y="-44" width="22" height="12" rx="2" fill="#555" transform="rotate(12 54 -38)"/>
-            </g>
+            <path d="M128 212 Q190 232 252 204" stroke="#f2c22e" stroke-width="3" fill="none"/>
+            <g class="p-rafa" style="filter:url(#ink);" transform="translate(92 268) scale(.9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(8)"><use href="#upper"/><use href="#arms-fwd"/><rect x="30" y="-38" width="16" height="12" rx="3" fill="#333"/></g></g>
+            <g class="p-bia" style="filter:url(#ink);" transform="translate(304 274) scale(-.9 .9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-swing"/><line x1="16" y1="-84" x2="26" y2="-112" stroke="#8a5a2b" stroke-width="4" stroke-linecap="round"/><rect x="12" y="-126" width="28" height="13" rx="2" fill="#555" transform="rotate(22 26 -118)"/><path d="M-8 -100 Q4 -136 46 -122" stroke="#fff" stroke-opacity=".85" stroke-width="2.5" stroke-linecap="round" fill="none"/></g><rect x="56" y="-14" width="6" height="16" fill="#d2a75d"/></g>
           </svg>
           <figcaption class="narration"><b>1 &middot; Layout.</b> Coffee, a tape measure, and strong opinions.</figcaption>
           <p class="bubble tail-bl" style="left:3%;top:31%;width:24%">Eleven feet, four inches.</p>
-          <p class="bubble tail-bl" style="left:57%;top:24%;width:22%">Measured twice.</p>
+          <p class="bubble tail-br" style="left:38%;top:26%;width:21%">Measured twice.</p>
           <p class="bubble tail-bl" style="left:80%;top:44%;width:17%">Once more.</p>
           <span class="sfx" style="left:64%;top:64%;--r:-9deg">THWACK!</span>
         </figure>
@@ -277,28 +306,14 @@
             <ellipse cx="352" cy="234" rx="44" ry="16" fill="#8f6a43"/>
             <rect x="56" y="232" width="288" height="26" rx="4" fill="#5e4028"/>
             <rect x="56" y="240" width="176" height="18" rx="3" fill="#b9b9b4" stroke="#8d8d88" stroke-width="1.5"/>
-            <g class="p-marcos" style="filter:url(#ink)" transform="translate(70 296) scale(.9)">
-              <use href="#pose-fwd"/>
-              <line x1="30" y1="-110" x2="38" y2="-16" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round"/>
-              <path d="M30 -16 L46 -16 L44 8 L34 8 Z" fill="#c8ccd0" stroke="#7b8288" stroke-width="1.5"/>
-            </g>
-            <g class="p-thiago" style="filter:url(#ink)" transform="translate(335 296) scale(-.9 .9)">
-              <use href="#pose-fwd"/>
-              <path d="M34 -66 L82 -56" stroke="#7a7f86" stroke-width="5" stroke-linecap="round"/>
-              <path d="M62 -72 L122 -72 L110 -38 L74 -38 Z" fill="#c0392b" stroke="#7a2a20" stroke-width="1.5"/>
-              <path d="M66 -72 Q92 -84 118 -72 Z" fill="#b9b9b4"/>
-              <line x1="80" y1="-38" x2="74" y2="0" stroke="#555" stroke-width="4"/>
-              <circle cx="118" cy="-14" r="14" fill="#2f2f2f"/><circle cx="118" cy="-14" r="5" fill="#9a9a9a"/>
-            </g>
-            <g class="p-bia" style="filter:url(#ink)" transform="translate(206 296) scale(.9)">
-              <use href="#pose-kneel"/>
-              <rect x="34" y="-6" width="30" height="7" rx="2" fill="#d9b24a" stroke="#8a6d1f" stroke-width="1.2"/>
-            </g>
+            <g class="p-marcos" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(70 296) scale(.9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(16)"><use href="#upper"/><use href="#arms-push"/><line x1="20" y1="-70" x2="44" y2="30" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round"/><path d="M38 26 L54 26 L52 46 L42 46 Z" fill="#c8ccd0" stroke="#7b8288" stroke-width="1.5"/></g><ellipse cx="62" cy="-30" rx="5" ry="3.5" fill="#8f6a43"/><ellipse cx="72" cy="-40" rx="3.5" ry="2.5" fill="#8f6a43"/></g>
+            <g class="p-thiago" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(335 296) scale(-.9 .9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(14)"><use href="#upper"/><use href="#arms-push"/></g><path d="M30 -52 L84 -46" stroke="#7a7f86" stroke-width="5" stroke-linecap="round"/><path d="M62 -62 L122 -62 L110 -30 L74 -30 Z" fill="#c0392b" stroke="#7a2a20" stroke-width="1.5"/><path d="M66 -62 Q92 -76 118 -62 Z" fill="#b9b9b4"/><line x1="80" y1="-30" x2="74" y2="0" stroke="#555" stroke-width="4"/><circle cx="118" cy="-14" r="14" fill="#2f2f2f"/><circle cx="118" cy="-14" r="5" fill="#9a9a9a"/><path d="M126 -4 l16 4 M124 -20 l18 -4" stroke="#fff" stroke-opacity=".7" stroke-width="2.5" stroke-linecap="round"/></g>
+            <g class="p-bia" style="filter:url(#ink);" transform="translate(206 296) scale(.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="34" y="-6" width="30" height="7" rx="2" fill="#d9b24a" stroke="#8a6d1f" stroke-width="1.2"/></g>
           </svg>
           <figcaption class="narration"><b>2 &middot; Footing.</b> Concrete: the one ingredient you can't un-pour.</figcaption>
           <p class="bubble tail-bl" style="left:2%;top:33%;width:32%">Four feet down. Frost doesn't negotiate.</p>
           <p class="bubble tail-br" style="left:62%;top:30%;width:34%">This wheelbarrow has opinions.</p>
-          <span class="sfx" style="left:38%;top:12%;--r:6deg">SPLORCH</span>
+          <span class="sfx" style="left:32%;top:24%;--r:6deg">SPLORCH</span>
         </figure>
 
         <!-- 3 -->
@@ -317,14 +332,8 @@
             </g>
             <g stroke="#7a7f86" stroke-width="2.5"><line x1="236" y1="212" x2="298" y2="146"/><line x1="298" y1="212" x2="236" y2="146"/></g>
             <rect x="228" y="140" width="78" height="7" fill="#c69a5b" stroke="#8a6a37" stroke-width="1.2"/>
-            <g class="p-thiago" style="filter:url(#ink)" transform="translate(256 140) scale(-.9 .9)">
-              <use href="#pose-fwd"/>
-              <ellipse cx="46" cy="-66" rx="9" ry="7" fill="#9c8468" stroke="#5f4f3f" stroke-width="1.5"/>
-            </g>
-            <g class="p-bia" style="filter:url(#ink)" transform="translate(340 278) scale(-.9 .9)">
-              <use href="#pose-up"/>
-              <ellipse cx="26" cy="-110" rx="13" ry="9" fill="#9c8468" stroke="#5f4f3f" stroke-width="1.5"/>
-            </g>
+            <g class="p-thiago" style="filter:url(#ink);" transform="translate(256 140) scale(-.9 .9)"><use href="#legs-wide"/><g transform="translate(0 -40) rotate(10)"><use href="#upper"/><use href="#arms-fwd"/><ellipse cx="46" cy="-28" rx="10" ry="7" fill="#9c8468" stroke="#5f4f3f" stroke-width="1.5"/></g></g>
+            <g class="p-bia" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(340 278) scale(-.9 .9)"><use href="#legs-wide"/><g transform="translate(0 -40) rotate(-4)"><use href="#upper"/><use href="#arms-up"/><ellipse cx="26" cy="-76" rx="13" ry="9" fill="#9c8468" stroke="#5f4f3f" stroke-width="1.5"/></g></g>
           </svg>
           <figcaption class="narration narration--bottom"><b>3 &middot; Stonework.</b> No two fieldstones alike. All of them heavy.</figcaption>
           <p class="bubble tail-bl" style="left:6%;top:6%;width:44%">A little to the left.</p>
@@ -351,19 +360,9 @@
               <line x1="236" y1="90" x2="236" y2="212"/><line x1="298" y1="90" x2="298" y2="212"/>
             </g>
             <rect x="228" y="140" width="78" height="7" fill="#c69a5b" stroke="#8a6a37" stroke-width="1.2"/>
-            <g class="p-thiago" style="filter:url(#ink)" transform="translate(256 140) scale(-.9 .9)">
-              <use href="#pose-up"/>
-              <rect x="4" y="-114" width="52" height="9" fill="#9aa0a8" stroke="#6b7078" stroke-width="1.5"/>
-            </g>
-            <g class="p-bia" style="filter:url(#ink)" transform="translate(112 278) scale(.9)">
-              <use href="#pose-kneel"/>
-              <rect x="16" y="-14" width="72" height="7" rx="2" fill="#e9c02b" stroke="#a88a12" stroke-width="1.2"/>
-              <circle cx="52" cy="-10" r="2.4" fill="#e7f7c9"/>
-            </g>
-            <g class="p-rafa" style="filter:url(#ink)" transform="translate(330 280) scale(-.9 .9)">
-              <use href="#pose-fwd"/>
-              <rect x="14" y="-74" width="50" height="12" fill="#a8adb4" stroke="#6b7078" stroke-width="1.5"/>
-            </g>
+            <g class="p-thiago" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(256 140) scale(-.9 .9)"><use href="#legs-wide"/><g transform="translate(0 -40) rotate(6)"><use href="#upper"/><use href="#arms-up"/><rect x="4" y="-80" width="52" height="9" fill="#9aa0a8" stroke="#6b7078" stroke-width="1.5"/></g></g>
+            <g class="p-bia" style="filter:url(#ink);" transform="translate(112 278) scale(.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="16" y="-14" width="72" height="7" rx="2" fill="#e9c02b" stroke="#a88a12" stroke-width="1.2"/><circle cx="52" cy="-10" r="2.4" fill="#e7f7c9"/></g>
+            <g class="p-rafa" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(330 280) scale(-.9 .9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(-4)"><use href="#upper"/><use href="#arms-fwd"/><rect x="14" y="-34" width="50" height="12" fill="#a8adb4" stroke="#6b7078" stroke-width="1.5"/></g></g>
           </svg>
           <figcaption class="narration"><b>4 &middot; Chimney &amp; hearth.</b> Granite goes on top. It's the part everybody photographs.</figcaption>
           <p class="bubble tail-br" style="left:67%;top:2%;width:31%">Cap's coming down. Nobody stand there.</p>
@@ -387,19 +386,9 @@
               <rect x="180" y="150" width="40" height="45" fill="#b5532f" stroke="#4a2a1c" stroke-width="2"/>
               <use href="#hearth-set"/>
             </g>
-            <g class="p-marcos" style="filter:url(#ink)" transform="translate(124 288) scale(.9)">
-              <use href="#pose-kneel"/>
-              <rect x="44" y="-2" width="22" height="12" rx="1.5" fill="#77839a" stroke="#4a5060" stroke-width="1.2"/>
-            </g>
-            <g class="p-lu" style="filter:url(#ink)" transform="translate(296 294) scale(-.9 .9)">
-              <use href="#pose-kneel"/>
-              <rect x="44" y="-2" width="22" height="12" rx="1.5" fill="#8590a6" stroke="#4a5060" stroke-width="1.2"/>
-            </g>
-            <g class="p-bia" style="filter:url(#ink)" transform="translate(44 268) scale(.9)">
-              <use href="#pose-fwd"/>
-              <line x1="36" y1="-66" x2="62" y2="-2" stroke="#8a5a2b" stroke-width="4" stroke-linecap="round"/>
-              <path d="M52 0 L82 0 L78 -9 L56 -9 Z" fill="#a0763a" stroke="#6b4a1f" stroke-width="1.2"/>
-            </g>
+            <g class="p-marcos" style="filter:url(#ink);" transform="translate(124 288) scale(.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="44" y="-2" width="22" height="12" rx="1.5" fill="#77839a" stroke="#4a5060" stroke-width="1.2"/></g>
+            <g class="p-lu" style="filter:url(#ink);" transform="translate(296 294) scale(-.9 .9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="44" y="-2" width="22" height="12" rx="1.5" fill="#8590a6" stroke="#4a5060" stroke-width="1.2"/></g>
+            <g class="p-bia" style="filter:url(#ink);" transform="translate(44 268) scale(.9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(12)"><use href="#upper"/><use href="#arms-push"/><line x1="18" y1="-56" x2="60" y2="34" stroke="#8a5a2b" stroke-width="4" stroke-linecap="round"/><path d="M48 32 L74 36 L72 26 L52 24 Z" fill="#a0763a" stroke="#6b4a1f" stroke-width="1.2"/></g></g>
           </svg>
           <figcaption class="narration"><b>5 &middot; Pavers.</b> The last stone goes in. The cleanup crew is also the crew.</figcaption>
           <p class="bubble tail-bl" style="left:2%;top:24%;width:26%">Straight lines. Always.</p>
@@ -411,9 +400,9 @@
         <figure class="panel p6 panel-photo">
           <img src="assets/images/stone-fireplace-patio-1.jpg" alt="Completed fieldstone outdoor fireplace with matching paver patio built by Magic Tools Contracting">
           <svg class="crew-overlay" viewBox="0 0 240 130" role="img" aria-label="The cartoon crew stands proudly in front of the finished fireplace: one worker has a fist raised, the others look on with satisfied smiles.">
-            <g class="p-marcos" style="filter:url(#ink)" transform="translate(48 128) scale(.95)"><use href="#pose-fwd"/></g>
-            <g class="p-rafa" style="filter:url(#ink)" transform="translate(122 128) scale(.95)"><use href="#pose-cheer"/></g>
-            <g class="p-lu" style="filter:url(#ink)" transform="translate(196 128) scale(-.95 .95)"><use href="#pose-fwd"/></g>
+            <g class="p-marcos" style="filter:url(#ink);" transform="translate(48 128) scale(.95)"><use href="#legs"/><g transform="translate(0 -40) rotate(3)"><use href="#upper"/><use href="#arms-hips"/></g></g>
+            <g class="p-rafa" style="filter:url(#ink);" transform="translate(122 128) scale(.95)"><use href="#legs-jump"/><g transform="translate(0 -40) rotate(-6)"><use href="#upper"/><use href="#arms-cheer"/></g></g>
+            <g class="p-lu" style="filter:url(#ink);" transform="translate(196 128) scale(-.95 .95)"><use href="#legs"/><g transform="translate(0 -40) rotate(3)"><use href="#upper"/><use href="#arms-hips"/></g></g>
           </svg>
           <figcaption class="narration"><b>6 &middot; The real thing.</b> Yes, this one's a photo. The rest was mostly accurate.</figcaption>
           <p class="bubble tail-br" style="left:8%;bottom:34%;width:50%">Worth every stone.</p>

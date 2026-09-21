@@ -586,6 +586,10 @@ body {
 .s-skin { stroke: var(--skin); }
 .s-shirt { stroke: var(--shirt); }
 .s-shirt-dark { stroke: var(--shirt-dark); }
+.pants, .pants-back { fill: none; stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; }
+.pants { stroke: #3a4a6a; }
+.pants-back { stroke: #2f3d5a; }
+.boot { fill: #4b3426; }
 
 @media (max-width: 759px) {
   .p1 .bubble:nth-of-type(3) { display: none; }
