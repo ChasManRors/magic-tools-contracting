@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Built It: Bathroom Tile & Vanity | Magic Tools Contracting</title>
+  <meta name="description" content="A step-by-step cartoon of how Magic Tools Contracting installs large-format bathroom floor tile, from chalk lines and floor prep to grout.">
+  <meta property="og:image" content="assets/images/logo.png">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Magic Tools Contracting",
+    "image": "https://magictoolscontracting.com/assets/images/logo.png",
+    "url": "https://magictoolscontracting.com",
+    "telephone": "+16174589246",
+    "email": "magictoolscontracting@gmail.com",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+16174589246",
+        "email": "magictoolscontracting@gmail.com",
+        "contactType": "customer service"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+16174589246",
+        "email": "magictoolsmasonry@gmail.com",
+        "contactType": "customer service"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Arlington",
+      "addressRegion": "MA",
+      "postalCode": "02474",
+      "addressCountry": "US"
+    },
+    "areaServed": "Arlington, MA and the Greater Boston area",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    "sameAs": ["https://magictoolsmasonry.com"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Shared cartoon crew and scene parts. Reused by every "How we built it" page. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Textures -->
+      <pattern id="fs" width="30" height="24" patternUnits="userSpaceOnUse">
+        <rect width="30" height="24" fill="#cdbfa8"/>
+        <ellipse cx="8" cy="6" rx="8" ry="5.5" fill="#a08a70" stroke="#6e5f50" stroke-width="1"/>
+        <ellipse cx="23" cy="7" rx="6.5" ry="5" fill="#8a7560" stroke="#6e5f50" stroke-width="1"/>
+        <ellipse cx="7" cy="18" rx="6" ry="5" fill="#b39c80" stroke="#6e5f50" stroke-width="1"/>
+        <ellipse cx="20" cy="18.5" rx="8" ry="5" fill="#7d6a58" stroke="#6e5f50" stroke-width="1"/>
+        <ellipse cx="30" cy="20" rx="3" ry="4" fill="#9c8468" stroke="#6e5f50" stroke-width="1"/>
+      </pattern>
+      <pattern id="pv" width="60" height="36" patternUnits="userSpaceOnUse">
+        <rect width="60" height="36" fill="#4a5060"/>
+        <rect x="1" y="1" width="27" height="16" rx="1.5" fill="#6f7a90"/>
+        <rect x="30" y="1" width="29" height="16" rx="1.5" fill="#8590a6"/>
+        <rect x="-14" y="19" width="27" height="16" rx="1.5" fill="#5b6579"/>
+        <rect x="15" y="19" width="27" height="16" rx="1.5" fill="#9098a8"/>
+        <rect x="44" y="19" width="27" height="16" rx="1.5" fill="#7a8494"/>
+      </pattern>
+
+      <!-- Backyard scene: sky, house, fence, bare tree -->
+      <g id="scene-bg">
+        <rect width="400" height="300" fill="#cfe7f4"/>
+        <rect x="248" y="0" width="152" height="196" fill="#dfe3e8"/>
+        <g stroke="#c2c8d0" stroke-width="1.5">
+          <line x1="248" y1="30" x2="400" y2="30"/><line x1="248" y1="60" x2="400" y2="60"/>
+          <line x1="248" y1="90" x2="400" y2="90"/><line x1="248" y1="120" x2="400" y2="120"/>
+          <line x1="248" y1="150" x2="400" y2="150"/><line x1="248" y1="180" x2="400" y2="180"/>
+        </g>
+        <rect x="310" y="38" width="56" height="62" fill="#f4fbff" stroke="#9aa6b2" stroke-width="3"/>
+        <line x1="338" y1="38" x2="338" y2="100" stroke="#9aa6b2" stroke-width="2"/>
+        <line x1="310" y1="69" x2="366" y2="69" stroke="#9aa6b2" stroke-width="2"/>
+        <rect x="0" y="122" width="150" height="76" fill="#c2b08f"/>
+        <g stroke="#dccfb3" stroke-width="2">
+          <line x1="0" y1="140" x2="150" y2="198"/><line x1="0" y1="180" x2="110" y2="122"/>
+          <line x1="40" y1="122" x2="150" y2="180"/><line x1="0" y1="122" x2="90" y2="198"/>
+          <line x1="60" y1="122" x2="150" y2="150"/><line x1="0" y1="198" x2="150" y2="122"/>
+        </g>
+        <path d="M46 198 L50 128 L46 92 M50 128 L28 104 M49 112 L72 88 M47 96 L40 72" stroke="#6b5443" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <rect x="0" y="190" width="400" height="20" fill="#a89a7c"/>
+      </g>
+      <g id="dirt">
+        <rect y="205" width="400" height="95" fill="#b98f5f"/>
+        <g fill="#a37a4d">
+          <ellipse cx="30" cy="235" rx="9" ry="3"/><ellipse cx="120" cy="290" rx="10" ry="3"/>
+          <ellipse cx="205" cy="228" rx="8" ry="2.5"/><ellipse cx="290" cy="288" rx="11" ry="3"/>
+          <ellipse cx="365" cy="240" rx="9" ry="3"/><ellipse cx="60" cy="275" rx="7" ry="2.5"/>
+        </g>
+      </g>
+      <g id="stake">
+        <rect x="-2" y="-28" width="4" height="28" fill="#d2a75d"/>
+        <rect x="-3.5" y="-31" width="7" height="7" fill="#f28c28"/>
+      </g>
+
+      <!-- Crew: legs (origin between the feet; hips sit at y = -40) -->
+      <g id="legs">
+        <path d="M-2 -42 L-9 -9" class="pants-back"/>
+        <path d="M3 -42 L10 -9" class="pants"/>
+        <rect x="-18" y="-10" width="17" height="10" rx="4" class="boot"/>
+        <rect x="3" y="-10" width="20" height="10" rx="4" class="boot"/>
+      </g>
+      <g id="legs-stride">
+        <path d="M-2 -42 L-14 -23 L-27 -9" class="pants-back"/>
+        <path d="M3 -42 L17 -25 L15 -9" class="pants"/>
+        <rect x="-40" y="-12" width="19" height="10" rx="4" class="boot" transform="rotate(-14 -30 -7)"/>
+        <rect x="5" y="-10" width="22" height="10" rx="4" class="boot"/>
+      </g>
+      <g id="legs-wide">
+        <path d="M-2 -42 L-19 -24 L-24 -9" class="pants-back"/>
+        <path d="M3 -42 L21 -24 L26 -9" class="pants"/>
+        <rect x="-36" y="-10" width="18" height="10" rx="4" class="boot"/>
+        <rect x="12" y="-10" width="22" height="10" rx="4" class="boot"/>
+      </g>
+      <g id="legs-jump">
+        <path d="M-2 -42 L-9 -9" class="pants-back"/>
+        <path d="M3 -42 L20 -32 L14 -18" class="pants"/>
+        <rect x="-18" y="-10" width="17" height="10" rx="4" class="boot"/>
+        <rect x="6" y="-24" width="20" height="10" rx="4" class="boot" transform="rotate(-18 16 -19)"/>
+      </g>
+      <g id="legs-kneel">
+        <path d="M0 -32 L24 -32 L24 -8" class="pants"/>
+        <path d="M0 -32 L-12 -6 L-32 -6" class="pants-back"/>
+        <rect x="18" y="-9" width="22" height="9" rx="3.5" class="boot"/>
+        <rect x="-40" y="-11" width="14" height="9" rx="3.5" class="boot"/>
+      </g>
+
+      <!-- Crew: torso and head (hips are the origin) -->
+      <g id="torso">
+        <path d="M-15 -44 Q-19 -22 -15 2 L15 2 Q19 -22 15 -44 Q0 -52 -15 -44Z" class="shirt"/>
+        <path d="M-15 -4 L15 -4" stroke="rgba(0,0,0,.28)" stroke-width="3.5"/>
+        <path d="M-4 -47 L0 -38 L4 -47" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M-9 -30 Q-7 -20 -9 -10" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="2"/>
+      </g>
+      <g id="head">
+        <rect x="-4" y="-52" width="9" height="10" class="skin"/>
+        <circle class="bun" cx="-15" cy="-74" r="7" style="fill:var(--hair)"/>
+        <g style="visibility:var(--curl,hidden);fill:var(--hair)">
+          <circle cx="-14" cy="-68" r="6"/><circle cx="-17" cy="-60" r="6"/><circle cx="-14" cy="-52" r="5"/>
+        </g>
+        <circle cx="0" cy="-60" r="14.5" class="skin"/>
+        <path d="M-6 -56 Q-4 -40 6 -40 Q15 -42 15 -55 Q10 -47 4 -47 Q-2 -47 -6 -56Z" style="visibility:var(--beard,hidden);fill:var(--hair)"/>
+        <ellipse cx="-13" cy="-58" rx="4" ry="6" style="fill:var(--hair)"/>
+        <circle cx="4" cy="-59" r="1.9" fill="#2a1a12"/>
+        <circle cx="11.5" cy="-59" r="1.9" fill="#2a1a12"/>
+        <path d="M2 -52 Q8 -45 14 -52 Z" fill="#fff" stroke="#5a2a1f" stroke-width="1.6" stroke-linejoin="round" style="visibility:var(--smile,visible)"/>
+        <path d="M3 -50 L13 -51.5" stroke="#5a2a1f" stroke-width="2.2" stroke-linecap="round" style="visibility:var(--grit,hidden)"/>
+        <path d="M3 -48 L13 -49.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round" style="visibility:var(--grit,hidden)"/>
+        <path d="M-1 -70 Q-4 -76 -1 -79 Q2 -76 -1 -70Z" fill="#8fd3f0" stroke="#33546b" stroke-width=".8" style="visibility:var(--sweat,hidden)" transform="translate(-16 12)"/>
+        <rect x="0" y="-65" width="18" height="9" rx="3.5" fill="#bfe6f5" fill-opacity=".55" stroke="#33546b" stroke-width="1.5"/>
+        <path d="M0 -61 L-12 -62" stroke="#33546b" stroke-width="1.5"/>
+        <path d="M-16 -68 Q-16 -87 1 -87 Q18 -87 18 -68 Z" class="hat" stroke="rgba(0,0,0,.25)" stroke-width="1.2"/>
+        <rect x="-18" y="-69" width="40" height="5" rx="2.5" class="hat" stroke="rgba(0,0,0,.25)" stroke-width="1.2"/>
+        <rect x="-3" y="-87" width="7" height="14" rx="2" fill="rgba(0,0,0,.14)"/>
+      </g>
+      <g id="upper">
+        <use href="#torso"/>
+        <g transform="rotate(-8 0 -46)"><use href="#head"/></g>
+      </g>
+
+      <!-- Crew: arm poses (hips are the origin) -->
+      <g id="arms-fwd">
+        <path d="M-2 -38 L8 -20 L27 -23" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M8 -20 L27 -23" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="-23" r="6" class="glove"/>
+        <path d="M8 -38 L17 -20 L35 -26" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M17 -20 L35 -26" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="36" cy="-26" r="6" class="glove"/>
+      </g>
+      <g id="arms-push">
+        <path d="M-2 -38 L14 -26 L26 -18" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M14 -26 L26 -18" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="27" cy="-17" r="6" class="glove"/>
+        <path d="M8 -38 L20 -28 L32 -22" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M20 -28 L32 -22" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="33" cy="-21" r="6" class="glove"/>
+      </g>
+      <g id="arms-up">
+        <path d="M-2 -38 L16 -46 L20 -64" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M16 -46 L20 -64" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="20" cy="-66" r="6" class="glove"/>
+        <path d="M8 -38 L26 -48 L29 -66" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M26 -48 L29 -66" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="29" cy="-68" r="6" class="glove"/>
+      </g>
+      <g id="arms-swing">
+        <path d="M-2 -38 L10 -60 L10 -80" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M10 -60 L10 -80" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="10" cy="-82" r="6" class="glove"/>
+        <path d="M8 -38 L26 -58 L16 -82" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M26 -58 L16 -82" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="16" cy="-84" r="6" class="glove"/>
+      </g>
+      <g id="arms-kneel">
+        <path d="M-2 -38 L22 -14 L38 6" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M22 -14 L38 6" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="39" cy="8" r="6" class="glove"/>
+        <path d="M8 -38 L28 -12 L48 10" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M28 -12 L48 10" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="49" cy="12" r="6" class="glove"/>
+      </g>
+      <g id="arms-cheer">
+        <path d="M-6 -38 L-24 -56 L-34 -84" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M-24 -56 L-34 -84" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="-35" cy="-87" r="7" class="glove"/>
+        <path d="M8 -38 L26 -58 L36 -86" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M26 -58 L36 -86" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="37" cy="-89" r="7" class="glove"/>
+      </g>
+      <g id="arms-hips">
+        <path d="M-6 -38 L-24 -24 L-12 -8" class="s-shirt-dark" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M-24 -24 L-12 -8" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="-11" cy="-7" r="6" class="glove"/>
+        <path d="M8 -38 L27 -24 L13 -8" class="s-shirt" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M27 -24 L13 -8" class="s-skin" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="12" cy="-7" r="6" class="glove"/>
+      </g>
+
+      <!-- The finished fireplace and its walls (the last panel matches the photo) -->
+      <g id="hearth-set">
+        <rect x="170" y="195" width="60" height="10" fill="#a8adb4" stroke="#6b7078" stroke-width="1.5"/>
+      </g>
+      <g id="flames">
+        <path d="M186 195 Q182 176 194 166 Q193 178 201 172 Q200 160 208 152 Q214 170 216 180 Q220 172 218 190 L216 195 Z" fill="#f5a623"/>
+        <path d="M194 195 Q192 182 200 176 Q202 184 208 180 Q212 188 210 195 Z" fill="#ffd95a"/>
+      </g>
+      <!-- Comic ink outline for the crew and the stonework -->
+      <filter id="ink" x="-8%" y="-8%" width="116%" height="116%">
+        <feMorphology in="SourceAlpha" operator="dilate" radius="1.3" result="grow"/>
+        <feFlood flood-color="#14110f"/>
+        <feComposite in2="grow" operator="in" result="line"/>
+        <feMerge><feMergeNode in="line"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+
+      <!-- Bathroom textures and scene parts -->
+      <pattern id="ft" width="128" height="80" patternUnits="userSpaceOnUse">
+        <rect width="128" height="80" fill="#a9a8a1"/>
+        <g fill="#dedcd6">
+          <rect x="1" y="1" width="62" height="38"/><rect x="65" y="1" width="62" height="38"/>
+          <rect x="-31" y="41" width="62" height="38"/><rect x="33" y="41" width="62" height="38"/><rect x="97" y="41" width="62" height="38"/>
+        </g>
+        <g stroke="#cbc9c1" stroke-width="1">
+          <line x1="9" y1="4" x2="11" y2="36"/><line x1="24" y1="3" x2="23" y2="30"/><line x1="44" y1="6" x2="46" y2="37"/>
+          <line x1="74" y1="4" x2="73" y2="34"/><line x1="92" y1="3" x2="94" y2="35"/><line x1="112" y1="5" x2="111" y2="30"/>
+          <line x1="8" y1="45" x2="7" y2="76"/><line x1="40" y1="44" x2="42" y2="72"/><line x1="58" y1="46" x2="57" y2="77"/>
+          <line x1="80" y1="45" x2="82" y2="74"/><line x1="104" y1="43" x2="103" y2="76"/><line x1="120" y1="46" x2="122" y2="70"/>
+        </g>
+      </pattern>
+      <pattern id="subfl" width="80" height="50" patternUnits="userSpaceOnUse">
+        <rect width="80" height="50" fill="#c8b28a"/>
+        <path d="M0 0 H80 M0 25 H80 M40 25 V50 M0 0 V25" stroke="#a8925f" stroke-width="1.5" fill="none"/>
+        <g fill="#8a7a5c"><circle cx="8" cy="8" r="1.2"/><circle cx="32" cy="8" r="1.2"/><circle cx="56" cy="8" r="1.2"/><circle cx="20" cy="36" r="1.2"/><circle cx="64" cy="36" r="1.2"/></g>
+      </pattern>
+      <pattern id="mortar" width="8" height="8" patternUnits="userSpaceOnUse">
+        <rect width="8" height="8" fill="#c3bdb0"/>
+        <rect y="0" width="8" height="3" fill="#a59f92"/>
+      </pattern>
+      <g id="bath-bg">
+        <rect width="400" height="300" fill="#eceff1"/>
+        <polygon points="250,0 340,0 300,196 226,196" fill="#fff" opacity=".5"/>
+        <rect x="160" y="22" width="80" height="58" fill="#dff1fb" stroke="#fff" stroke-width="5"/>
+        <line x1="200" y1="22" x2="200" y2="80" stroke="#fff" stroke-width="3"/>
+        <rect x="30" y="96" width="70" height="100" fill="#f6f7f8" stroke="#d5d8db" stroke-width="1.5"/>
+        <rect x="24" y="90" width="82" height="8" fill="#fff" stroke="#d5d8db" stroke-width="1.5"/>
+        <rect x="300" y="96" width="70" height="100" fill="#f6f7f8" stroke="#d5d8db" stroke-width="1.5"/>
+        <rect x="294" y="90" width="82" height="8" fill="#fff" stroke="#d5d8db" stroke-width="1.5"/>
+        <rect x="0" y="195" width="400" height="10" fill="#fff" stroke="#cfd3d6" stroke-width="1.5"/>
+        <rect x="36" y="112" width="6" height="9" rx="1" fill="#fff" stroke="#c6cace"/>
+      </g>
+      <g id="plumb">
+        <rect x="171" y="132" width="8" height="24" rx="2" fill="#c8793c" stroke="#7a4520"/>
+        <rect x="221" y="132" width="8" height="24" rx="2" fill="#c8793c" stroke="#7a4520"/>
+        <rect x="199" y="150" width="8" height="30" rx="2" fill="#d9d9d9" stroke="#777"/>
+      </g>
+      <g id="vanity">
+        <rect x="110" y="128" width="180" height="10" rx="1.5" fill="#fafafa" stroke="#cfd3d6" stroke-width="1.5"/>
+        <rect x="178" y="130" width="44" height="6" fill="#eef1f3" stroke="#b9bec2"/>
+        <path d="M198 128 V112 H206 V116 H203 V128 Z" fill="#c9ced2" stroke="#7d8388" stroke-width="1"/>
+        <rect x="114" y="138" width="172" height="60" fill="#6b4a34" stroke="#3a281c" stroke-width="1.5"/>
+        <rect x="118" y="141" width="28" height="54" fill="#7a5640"/>
+        <rect x="154" y="141" width="92" height="25" fill="#7a5640"/>
+        <rect x="154" y="169" width="92" height="25" fill="#7a5640"/>
+        <rect x="254" y="141" width="28" height="54" fill="#7a5640"/>
+        <g stroke="#5a3c29" stroke-width="1.2" fill="none">
+          <path d="M122 150 H142 M121 164 H144 M123 178 H141 M124 188 H143"/>
+          <path d="M160 148 H240 M158 156 H244 M160 176 H241 M158 185 H243"/>
+          <path d="M258 152 H278 M257 166 H280 M259 180 H277"/>
+        </g>
+        <rect x="112" y="198" width="176" height="4" fill="#000" opacity=".12"/>
+      </g>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo-header.svg" alt="Magic Tools Contracting">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="ideas.html">Ideas</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>How We Built It</h1>
+        <p>Large-format bathroom floor tile and a floating vanity, in six panels.</p>
+      </div>
+    </section>
+
+    <section class="intro container">
+      <p class="gallery-note"><a href="gallery.html">&larr; Back to the gallery</a></p>
+
+      <div class="comic">
+
+        <figure class="panel p1 cool">
+          <svg class="scene" viewBox="0 100 400 200" role="img" aria-label="Panel 1. A bare bathroom with an exposed plywood subfloor. Two workers kneel at opposite ends of the room holding a chalk line; the line is snapped up in the middle with a puff of white chalk dust as they mark the center of the floor.">
+<use href="#bath-bg"/><rect x="0" y="205" width="400" height="95" fill="url(#subfl)"/><path d="M100 276 Q198 236 295 276" stroke="#f8f8f8" stroke-width="2" fill="none" opacity=".9"/><line x1="100" y1="276" x2="295" y2="276" stroke="#f8f8f8" stroke-width="2.5"/><g fill="#fff" opacity=".85"><circle cx="190" cy="271" r="7"/><circle cx="204" cy="274" r="6"/><circle cx="178" cy="275" r="5"/><circle cx="214" cy="270" r="4"/></g><g class="p-bia" style="filter:url(#ink);" transform="translate(60 284) scale(0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="42" y="-12" width="16" height="10" rx="2" fill="#2f6fb5"/></g><g class="p-rafa" style="filter:url(#ink);" transform="translate(336 284) scale(-0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="42" y="-12" width="16" height="10" rx="2" fill="#2f6fb5"/></g>
+          </svg>
+          <figcaption class="narration"><b>1 &middot; Layout.</b> Find the center of the room. Then find it again.</figcaption>
+          <p class="bubble tail-bl" style="left:3%;top:28%;width:26%">Walls are never square.</p>
+          <p class="bubble tail-br" style="left:68%;top:28%;width:26%">So the tile has to be.</p>
+          <span class="sfx" style="left:41%;top:46%;--r:-7deg">SNAP!</span>
+        </figure>
+
+        <figure class="panel p2 cool">
+          <svg class="scene scene--fill" preserveAspectRatio="xMidYMax slice" viewBox="0 40 400 260" role="img" aria-label="Panel 2. Floor prep in the bathroom. A worker in a green hard hat kneels and lays a long straightedge across a patch of gray self-leveling compound on the plywood subfloor to check it is flat; a worker on the left carries a heavy bag of leveling compound; a worker on the right leans over a bucket, mixing thinset with a paddle on a drill.">
+<use href="#bath-bg"/><use href="#plumb"/><rect x="0" y="205" width="400" height="95" fill="url(#subfl)"/><path d="M120 236 L300 236 L312 262 L108 262 Z" fill="#a9adb1" stroke="#7d8286" stroke-width="1.5"/><path d="M132 242 H250" stroke="#d3d6d9" stroke-width="3" stroke-linecap="round"/><g class="p-rafa" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(62 290) scale(0.9 0.9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(-4)"><use href="#upper"/><use href="#arms-fwd"/><rect x="12" y="-44" width="46" height="30" rx="5" fill="#cfc3ad" stroke="#7d7360" stroke-width="1.5"/><rect x="20" y="-36" width="30" height="8" rx="2" fill="#b0463a"/></g></g><g class="p-marcos" style="filter:url(#ink);" transform="translate(205 290) scale(0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="-60" y="-22" width="150" height="6" rx="2" fill="#e9c02b" stroke="#a88a12" stroke-width="1.2"/><circle cx="14" cy="-19" r="2.2" fill="#e7f7c9"/></g><g class="p-thiago" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(340 290) scale(-0.9 0.9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(12)"><use href="#upper"/><use href="#arms-push"/><rect x="26" y="-34" width="18" height="12" rx="3" fill="#2f6fb5" stroke="#1c3f6b" stroke-width="1.2"/></g><path d="M20 -22 L30 -2 L58 -2 L64 -22 Z" fill="#f3f3f0" stroke="#8c8c86" stroke-width="1.5"/><ellipse cx="42" cy="-22" rx="22" ry="5" fill="#bdb7aa" stroke="#8c8c86" stroke-width="1"/><line x1="38" y1="-50" x2="44" y2="-16" stroke="#777" stroke-width="3" stroke-linecap="round"/><path d="M32 -16 L52 -16" stroke="#777" stroke-width="3" stroke-linecap="round"/></g>
+          </svg>
+          <figcaption class="narration"><b>2 &middot; Prep.</b> Big tile forgives nothing, least of all a floor that isn't flat.</figcaption>
+          <p class="bubble tail-bl" style="left:36%;top:28%;width:22%">Flat. I said flat.</p>
+          <p class="bubble tail-br" style="left:62%;top:24%;width:24%">Define &ldquo;flat.&rdquo;</p>
+          <span class="sfx" style="left:64%;top:4%;--r:6deg">WHIRRR</span>
+        </figure>
+
+        <figure class="panel p3 tilt">
+          <svg class="scene" viewBox="140 10 260 285" role="img" aria-label="Panel 3. Close on the floor. One worker kneels and sets a large gray tile down onto a bed of thinset, while a second worker kneels on the right and drags a notched trowel through the thinset, leaving straight parallel ridges.">
+<use href="#bath-bg"/><rect x="0" y="205" width="400" height="95" fill="url(#subfl)"/><path d="M226 236 L344 236 L352 254 L220 254 Z" fill="url(#mortar)" stroke="#8c8679" stroke-width="1.5"/><g class="p-lu" style="filter:url(#ink);" transform="translate(190 248) scale(0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><polygon points="34,-8 96,-8 102,-1 40,-1" fill="#dedcd6" stroke="#8f8e86" stroke-width="1.5"/><path d="M102 -1 L96 -8" stroke="#c3bdb0" stroke-width="3"/></g><g class="p-thiago" style="filter:url(#ink);" transform="translate(372 248) scale(-0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><path d="M40 -6 H74 V2 H40 Z" fill="#c8ccd0" stroke="#7b8288" stroke-width="1.2"/><path d="M42 2 v4 M48 2 v4 M54 2 v4 M60 2 v4 M66 2 v4 M72 2 v4" stroke="#7b8288" stroke-width="2"/></g>
+          </svg>
+          <figcaption class="narration narration--bottom"><b>3 &middot; First tile.</b> Thinset on the floor and the tile. Trust issues.</figcaption>
+          <p class="bubble tail-bl" style="left:6%;top:38%;width:44%">Back-butter it, too.</p>
+          <p class="bubble tail-br" style="left:54%;top:24%;width:42%">Ridges all one way.</p>
+          <span class="sfx" style="left:4%;top:6%;--r:-9deg">SQUELCH</span>
+        </figure>
+
+        <figure class="panel p4 warm">
+          <svg class="scene" viewBox="0 0 400 300" role="img" aria-label="Panel 4. The tile is going down. Large gray-white tiles cover the right half of the floor. A worker on the left cuts a tile on a wet saw with water spraying, another carries a big tile with a suction-cup lifter, and a third kneels on a board across the new tile checking it with a long level.">
+<use href="#bath-bg"/><use href="#plumb"/><rect x="0" y="205" width="400" height="95" fill="url(#subfl)"/><polygon points="196,205 400,205 400,300 176,300 190,262" fill="url(#ft)"/><rect x="212" y="262" width="96" height="6" fill="#c69a5b" stroke="#8a6a37" stroke-width="1.2"/><g class="p-thiago" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(62 272) scale(0.9 0.9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(10)"><use href="#upper"/><use href="#arms-push"/></g><rect x="8" y="-46" width="112" height="6" fill="#5c6f80" stroke="#2f3e4a" stroke-width="1.2"/><path d="M14 -40 L10 0 M114 -40 L118 0" stroke="#2f3e4a" stroke-width="3"/><rect x="38" y="-54" width="52" height="8" fill="#dedcd6" stroke="#8f8e86" stroke-width="1.2"/><path d="M92 -58 a10 10 0 0 1 14 12" stroke="#9fdcf2" stroke-width="2.5" fill="none"/><circle cx="104" cy="-66" r="2.4" fill="#9fdcf2"/><circle cx="112" cy="-58" r="2" fill="#9fdcf2"/><circle cx="110" cy="-72" r="1.8" fill="#9fdcf2"/></g><g class="p-marcos" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(150 276) scale(0.9 0.9)"><use href="#legs-wide"/><g transform="translate(0 -40) rotate(6)"><use href="#upper"/><use href="#arms-fwd"/><rect x="8" y="-36" width="64" height="8" fill="#dedcd6" stroke="#8f8e86" stroke-width="1.5"/><rect x="24" y="-44" width="8" height="8" rx="3" fill="#2a2a2a"/><rect x="50" y="-44" width="8" height="8" rx="3" fill="#2a2a2a"/></g></g><g class="p-bia" style="filter:url(#ink);" transform="translate(300 272) scale(0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="-30" y="-16" width="96" height="6" rx="2" fill="#e9c02b" stroke="#a88a12" stroke-width="1.2"/><circle cx="18" cy="-13" r="2.2" fill="#e7f7c9"/></g>
+          </svg>
+          <figcaption class="narration"><b>4 &middot; Field tile.</b> Every tile gets checked. All of them.</figcaption>
+          <p class="bubble tail-br" style="left:26%;top:22%;width:30%">Mind the lippage.</p>
+          <p class="bubble tail-bl" style="left:2%;top:26%;width:26%">Measure twice. Cut once. Breathe.</p>
+          <span class="sfx" style="left:56%;top:8%;--r:-6deg">ZZZZT</span>
+        </figure>
+
+        <figure class="panel p5 warm">
+          <svg class="scene" viewBox="0 60 400 240" role="img" aria-label="Panel 5. The bathroom is nearly finished. The floor is covered in large gray-white tile between two white boxed-in wall sections, and a floating wood vanity with two drawers, two side doors and a white countertop hangs on the wall. One worker kneels pressing grout into the joints with a float, another kneels wiping with a sponge, and a third carries a bucket.">
+<use href="#bath-bg"/><g style="filter:url(#ink)"><use href="#vanity"/></g><rect x="0" y="205" width="400" height="95" fill="url(#ft)"/><g class="p-bia" style="filter:url(#ink);" transform="translate(110 290) scale(0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="36" y="-4" width="34" height="9" rx="2" fill="#2f6fb5" stroke="#1c3f6b" stroke-width="1.2"/></g><g class="p-lu" style="filter:url(#ink);" transform="translate(268 292) scale(-0.9 0.9)"><use href="#legs-kneel"/><g transform="translate(0 -34) rotate(18)"><use href="#upper"/><use href="#arms-kneel"/></g><rect x="38" y="-4" width="28" height="12" rx="4" fill="#e8d24a" stroke="#8a7a1a" stroke-width="1.2"/></g><g class="p-thiago" style="filter:url(#ink);--smile:hidden;--grit:visible;--sweat:visible;" transform="translate(366 288) scale(-0.9 0.9)"><use href="#legs-stride"/><g transform="translate(0 -40) rotate(-4)"><use href="#upper"/><use href="#arms-fwd"/><rect x="24" y="-46" width="28" height="28" rx="3" fill="#e8e6e0" stroke="#8c8c86" stroke-width="1.5"/><path d="M24 -46 Q38 -60 52 -46" fill="none" stroke="#666" stroke-width="2"/></g></g>
+          </svg>
+          <figcaption class="narration"><b>5 &middot; Grout.</b> Straight joints and a floating vanity. Nobody walk on that floor.</figcaption>
+          <p class="bubble tail-bl" style="left:6%;top:32%;width:34%">Please don't walk on it.</p>
+          <p class="bubble tail-br" style="left:64%;top:36%;width:26%">Give it a day.</p>
+          <span class="sfx" style="left:43%;top:78%;--r:5deg">SWISH</span>
+        </figure>
+
+        <figure class="panel p6 panel-photo">
+          <img src="assets/images/bathroom-tile-2.jpg" alt="Bathroom with large-format gray-white floor tile and a floating wood vanity with a white countertop, installed by Magic Tools Contracting" style="object-position:48% 50%">
+          <svg class="crew-overlay" viewBox="0 0 240 130" role="img" aria-label="The cartoon crew stands proudly in front of the finished work: one worker has fists raised, the others look on with satisfied smiles.">
+<g class="p-marcos" style="filter:url(#ink);" transform="translate(48 128) scale(0.95 0.95)"><use href="#legs"/><g transform="translate(0 -40) rotate(3)"><use href="#upper"/><use href="#arms-hips"/></g></g><g class="p-rafa" style="filter:url(#ink);" transform="translate(122 128) scale(0.95 0.95)"><use href="#legs-jump"/><g transform="translate(0 -40) rotate(-6)"><use href="#upper"/><use href="#arms-cheer"/></g></g><g class="p-lu" style="filter:url(#ink);" transform="translate(196 128) scale(-0.95 0.95)"><use href="#legs"/><g transform="translate(0 -40) rotate(3)"><use href="#upper"/><use href="#arms-hips"/></g></g>
+          </svg>
+          <figcaption class="narration"><b>6 &middot; The real thing.</b> Yes, this one's a photo. The floor is the star.</figcaption>
+          <p class="bubble tail-br" style="left:6%;bottom:36%;width:46%">Go on. Drop a marble.</p>
+          <p class="bubble tail-br" style="right:4%;bottom:36%;width:34%">Straight grout lines.</p>
+        </figure>
+
+      </div>
+
+      <p class="build-cta">Thinking about a bathroom redo? <a href="contact.html">Get in touch</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-contact">
+        <li><a href="tel:+16174589246">(617) 458-9246</a></li>
+        <li><a href="mailto:magictoolscontracting@gmail.com">magictoolscontracting@gmail.com</a></li>
+        <li><a href="mailto:magictoolsmasonry@gmail.com">magictoolsmasonry@gmail.com</a></li>
+        <li>Arlington, MA 02474</li>
+        <li><a href="https://magictoolsmasonry.com">magictoolsmasonry.com</a></li>
+      </ul>
+      <p>&copy; 2026 Magic Tools Contracting. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

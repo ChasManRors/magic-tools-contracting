@@ -523,10 +523,17 @@ body {
   pointer-events: none;
 }
 
+.panel-photo {
+  aspect-ratio: 4 / 5;
+}
+
 .panel-photo img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .crew-overlay {
@@ -563,11 +570,11 @@ body {
     height: 100%;
   }
 
+  .panel-photo {
+    aspect-ratio: auto;
+  }
+
   .panel-photo img {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    object-fit: cover;
     object-position: 45% 30%;
   }
 }
