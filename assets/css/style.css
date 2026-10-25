@@ -384,6 +384,14 @@ body {
   color: #b91c1c;
 }
 
+.dev-banner {
+  background: #92400e;
+  color: #fff;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+}
+
 .under-construction-badge {
   display: inline-block;
   background: #fef3c7;
