@@ -331,6 +331,73 @@ body {
   margin-bottom: 12px;
 }
 
+.quote-form {
+  max-width: 520px;
+  margin-bottom: 48px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #1a1c4d;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid #1a1c4d;
+  border-color: #1a1c4d;
+}
+
+.quote-form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-status {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.form-status--success {
+  color: #15803d;
+}
+
+.form-status--error {
+  color: #b91c1c;
+}
+
+.under-construction-badge {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
 .services-cta {
   margin-top: 40px;
   font-size: 1.1rem;

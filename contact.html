@@ -65,6 +65,7 @@
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="ideas.html">Ideas</a></li>
           <li><a href="team.html">Team</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -80,6 +81,40 @@
     </section>
 
     <section class="intro container">
+      <h2>Request a Free Quote <span class="under-construction-badge" id="qf-badge">Coming soon</span></h2>
+      <p>
+        Tell us a bit about your project and how to reach you — we'll get
+        back to you to schedule a time to take a look.
+      </p>
+
+      <form id="quote-form" class="quote-form" novalidate>
+        <div class="form-group">
+          <label for="qf-name">Name</label>
+          <input type="text" id="qf-name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="qf-phone">Phone</label>
+          <input type="tel" id="qf-phone" name="phone" autocomplete="tel" placeholder="(617) 555-0100">
+        </div>
+
+        <div class="form-group">
+          <label for="qf-email">Email</label>
+          <input type="email" id="qf-email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="qf-description">Project Description</label>
+          <textarea id="qf-description" name="message" rows="5" required></textarea>
+        </div>
+
+        <!-- Honeypot: hidden from real visitors, bots tend to fill every field -->
+        <input type="checkbox" name="botcheck" class="quote-form-honeypot" tabindex="-1" autocomplete="off">
+
+        <button type="submit" class="btn">Send Quote Request</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
       <h2>Get In Touch</h2>
       <ul class="contact-list">
         <li>Phone: <a href="tel:+16174589246">(617) 458-9246</a></li>
@@ -113,5 +148,6 @@
     </div>
   </footer>
 
+  <script src="assets/js/quote-form.js"></script>
 </body>
 </html>
